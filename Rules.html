@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+
+<html manifest="main.appcache">
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta name="description" content="Page about the rules of chess">
+        <meta name="author" content="Christian Constantin Pustianu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" type="text/css" media="screen" rel="stylesheet"/>
+        <link href="print.css" type="text/css" media="print" rel="stylesheet"/>
+        <script src="script.js"></script>
+        <!-- link for social media icons -->
+        <script src="https://kit.fontawesome.com/62ad017188.js" crossorigin="anonymous"></script>
+        <title>Rules</title>
+    </head>
+    <body onload="defaultNone('rules'); defaultOpen();">
+        <nav id="nav">
+            <a id="logo" href="Home.html">CHESS THEORY</a>
+            <button id="icon" onclick="dropNavbar()"><i class="fas fa-bars"></i></button>
+            <a class="navitem" href="Home.html">Home</a>
+            <a class="navitem" href="Pieces.html">Pieces</a>
+            <a class="navitem active" href="Rules.html">Rules</a>
+            <a class="navitem" href="Openings.html">Openings</a>
+            <a class="navitem" href="Famous_Players.html">Famous Players</a>
+        </nav>
+        <div class="section1" id="s1rules">
+            <div>
+                <h1>The rules of chess</h1>
+                <p>Chess is a strategy boardgame between two players that fight to capture each other’s kings. Players start off with an equal number of pieces, one with the white ones and the other with the black ones. White always starts first and players take turns to move one piece at a time until one of them checkmates the enemy king OR there is a draw. Checkmate means that the king is under immediate attack (or in “check”) and cannot possibly remove the attack or get to safety within the next move.</p>
+            </div>
+        </div>
+        <div class="section2" id="s2rules">
+            <div class="menu">
+                <button class="menu_btn" onclick="openTab(event, 'board', 'rules')" id="defaultOpen">The Board</button>
+                <button class="menu_btn" onclick="openTab(event, 'setup', 'rules')">Initial Setup</button>
+                <button class="menu_btn" onclick="openTab(event, 'castling', 'rules')">Castling</button>
+                <button class="menu_btn" onclick="openTab(event, 'promotion', 'rules')">Pawn Promotion</button>
+                <button class="menu_btn" onclick="openTab(event, 'enpassant', 'rules')">En Passant</button>
+                <button class="menu_btn" onclick="openTab(event, 'checkmate', 'rules')">Check & Checkmate</button>
+                <button class="menu_btn" onclick="openTab(event, 'draws', 'rules')">Draws</button>
+            </div>
+            <div class="rules" id="board">
+                <img src="photos/empty_board.jpg" alt="Picture of the board numbered from 1 to 8 and a to h">
+                <h1>The Board</h1>
+                <p>On the chess board there are 64 squares arranged as an eight-by-eight square. These form 8 vertical lines called files, labelled from “a” to “h”, and 8 horizontal lines called ranks, labelled from 1 to 8. The first rank is the closest one to the white pieces and the eight one is closest to the black side. Moreover, the position of the king and queen separate the board into “queen’s side” and “king’s side”.</p>
+            </div>
+            <div class="rules" id="setup">
+                <img src="photos/full_board.jpg" alt="Picture of the initial setup of the board">
+                <h1>Initial Setup</h1>
+                <p class="list">At the start of the game both players arrange their pieces as follows:</p>
+                <ul>
+                    <li>All pawns arranged in a line filling the second rank (2 and 7)</li>
+                    <li>The rest of the pieces on the first rank (1 and 8)</li>
+                    <li>The queen is placed on the central square (file “d”) with the same colour as the piece (white queen on white square)</li>
+                    <li>The king is placed on the central square (file “e”) next to the queen</li>
+                    <li>The bishops are placed on files “c” and “f”</li>
+                    <li>The knights are places on files “b” and “g”</li>
+                    <li>The rooks are places in the corners of the board on files “a” and “h”</li>
+                </ul>
+            </div>
+            <div class="rules" id="castling">
+                <img src="photos/castling.gif" alt="Gif of the king and rooks castling">
+                <h1>Castling</h1>
+                <p class="list">This is a special move that the king can perform with one of the two rooks. He moves two squared towards the rook and the rook jumps over the king to the other side, thus protecting him. It is only possible under a set of conditions:</p>
+                <ul>
+                    <li>If the king has not moved since the start of the game</li>
+                    <li>If the rook has not moved since the start of the game</li>
+                    <li>If the king is not currently in check or does not pass through (or end up on) a square where he would be checked</li>
+                </ul>
+            </div>
+            <div class="rules" id="promotion">
+                <img src="photos/promotion.gif" alt="Gif of a pawn promoting to a queen">
+                <h1>Pawn Promotion</h1>
+                <p>Even though the pawn is the weakest and least valuable piece, if he manages to reach the other side of the board (the last rank), he is promoted to one of the other pieces, except the king. Thus, the pawn can become a queen, a rook, a bishop, or a knight. Most commonly, the pawn is promoted to a queen, as she is the strongest piece.</p>
+            </div>
+            <div class="rules" id="enpassant">
+                <img src="photos/enpassant.gif" alt="Gif of a pawn performing an En passant">
+                <h1>En Passant</h1>
+                <p>The pawn has another special move that he can perform in a game of chess. If at one point in the game, a player moves his pawn two squares for the first time, and an enemy pawn in positioned on an adjacent file, next to it, the enemy can capture the pawn as if it were a normal diagonal capture.<p>
+            </div>
+            <div class="rules" id="checkmate">
+                <img src="photos/checkmate.jpg" alt="Picture of a checkmate">
+                <h1>Check & Checkmate</h1>
+                <p>“Check” happens when the king is under attack and in immediate danger of being captured. This event forces the player whose king is attacked to move it immediately or capture the attacker. If the player has no moves that could save the king, then his king is “checkmated”, and the game is lost.</p>
+            </div>
+            <div class="rules" id="draws">
+                <img src="photos/stalemate.jpg" alt="Picture of a stalemate ">
+                <h1>Draws</h1>
+                <p class="list">A draw is when neither of the two players have won, and it can happen in chess in a number of ways:</p>
+                <ul>
+                    <li>When draw is offered by a player and accepted by the other</li>
+                    <li>When the game is in a dead position (king against king, king against king and bishop, king against king and knight, king and bishop against king and bishop - when both bishops are on squares of the same colour)</li>
+                    <li>When the player that has to move isn’t checked but has no options that would not put his king in check. This situation is called “stalemate” (shown in the picture).</li>
+                </ul>
+            </div>
+        </div>
+        <footer>
+            <div class="f_nav">
+                <p id="f_logo">CHESS THEORY</p>
+                <div id="f_pages">
+                    <a href="Home.html">Home</a>
+                    <a href="Pieces.html">Pieces</a>
+                    <a href="Rules.html">Rules</a>
+                    <a href="Openings.html">Openings</a>
+                    <a href="Famous_Players.html">Famous Players</a>
+                </div>
+            </div>
+            <div class="f_contact">
+                <h2>CONTACT</h2>
+                <address>
+                    <p><strong style="font-style:normal">Author:</strong><br>Christian Constantin Pustianu</p>
+                    <ul>
+                        <li>Tel: +40 735 851 024</li>
+                        <li>Email: <a href="mailto:sc20ccp@leeds.ac.uk">sc20ccp@leeds.ac.uk</a></li>
+                    </ul>
+                </address>
+            </div>
+            <div class="f_social">
+                <h2>SOCIAL MEDIA</h2>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="f_map">
+                <h1>FIDE Headquarters - Lausanne (Switzerland)</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87839.09959525487!2d6.582455223071494!3d46.528458625894665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c293ecd89a7e5%3A0xeb173fc9cae2ee5e!2sLausanne%2C%20Switzerland!5e0!3m2!1sen!2sro!4v1620113828038!5m2!1sen!2sro" loading="lazy"></iframe>
+                <p><em>Website created by Christian Constantin Pustianu, student ID:201436199, email:sc20ccp@leeds.ac.uk.</em></p>
+            </div>
+        </footer>
+    </body>
+</html>

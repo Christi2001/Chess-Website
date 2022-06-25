@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html manifest="main.appcache">
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta name="description" content="Page about the basics of chess">
+        <meta name="author" content="Christian Constantin Pustianu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" type="text/css" media="screen" rel="stylesheet"/>
+        <link href="print.css" type="text/css" media="print" rel="stylesheet"/>
+        <script src="script.js"></script>
+        <!-- link for social media icons -->
+        <script src="https://kit.fontawesome.com/62ad017188.js" crossorigin="anonymous"></script>
+        <title>Pieces</title>
+    </head>
+    <body onload="defaultNone('pieces'); defaultOpen();">
+        <nav id="nav">
+            <a id="logo" href="Home.html">CHESS THEORY</a>
+            <button id="icon" onclick="dropNavbar()"><i class="fas fa-bars"></i></button>
+            <a class="navitem" href="Home.html">Home</a>
+            <a class="navitem active" href="Pieces.html">Pieces</a>
+            <a class="navitem" href="Rules.html">Rules</a>
+            <a class="navitem" href="Openings.html">Openings</a>
+            <a class="navitem" href="Famous_Players.html">Famous Players</a>
+        </nav>
+        <div class="section1" id="s1pieces">
+            <div>
+                <h1 class="title">The real players</h1>
+            </div>
+        </div>
+        <div class="section2" id="s2pieces">
+            <div id="intro">
+                <h1>Introduction</h1>
+                <p>Chess is played on an eight-by-eight square chessboard with 32 pieces in total, 16 white and 16 black, each half controlled by one of the two players. The 16 pieces are: one king, one queen (worth 9 pawns), two rooks (worth 4 pawns), two bishops (worth 3 pawns), two knights (worth 3 pawns) and eight pawns, each having a distinct set of moves and rules.</p>
+            </div>
+            <div class="menu">
+                <button class="menu_btn" onclick="openTab(event, 'king', 'pieces')" id="defaultOpen">The King</button>
+                <button class="menu_btn" onclick="openTab(event, 'queen', 'pieces')">The Queen</button>
+                <button class="menu_btn" onclick="openTab(event, 'rook', 'pieces')">The Rook</button>
+                <button class="menu_btn" onclick="openTab(event, 'bishop', 'pieces')">The Bishop</button>
+                <button class="menu_btn" onclick="openTab(event, 'knight', 'pieces')">The Knight</button>
+                <button class="menu_btn" onclick="openTab(event, 'pawn', 'pieces')">The Pawn</button>
+            </div>
+            <!-- every link in the menu leads to the respective part in a suitable position  -->
+            <div class="pieces" id="king">
+                <img src="photos/king.jpg" alt="Picture of king's moves">
+                <h1>The King</h1>
+                <p>This is the most important piece in the game, as the main objective is to capture the enemy king. Whenever the king is attacked by a piece, the player must either move it out of the attack’s path or capture the enemy piece attacking it. It can move one square at a time (except when castling) as long as the move doesn’t result in him being under attack.</p>
+            </div>
+            <div class="pieces" id="queen">
+                <img src="photos/queen.jpg" alt="Picture of queen's moves">
+                <h1>The Queen</h1>
+                <p>She is the second most important piece, but can be considered as the weakest piece too, as every time she is under attack, she should move as to not get captured. She can move in any direction (horizontally, vertically and diagonally) however many sqares the player wants.</p>
+            </div>
+            <div class="pieces" id="rook">
+                <img src="photos/rook.jpg" alt="Picture of rook's moves">
+                <h1>The Rook</h1>
+                <p>This piece is the third most valuable piece. It can move horizontally and vertically any number of squares and can perform the special move of castling with the king.</p>
+            </div>
+            <div class="pieces" id="bishop">
+                <img src="photos/bishop.jpg" alt="Picture of bishop's moves">
+                <h1>The Bishop</h1>
+                <p>This piece is equally valuable with the knight. It can only move diagonally, any number of squares, which makes the two bishops able to only move on the colour they start on.</p>
+            </div>
+            <div class="pieces" id="knight">
+                <img src="photos/knight.jpg" alt="Picture of knight's moves">
+                <h1>The Knight</h1>
+                <p>This piece is equally valuable with the bishop. It can move in an “L” shape (two squares forward, one square sideways) and is the only piece able to jump over other pieces.</p>
+            </div>
+            <div class="pieces" id="pawn">
+                <img src="photos/pawns.jpg" alt="Picture of pawn's moves">
+                <h1>The Pawns</h1>
+                <p>These are the least valuable pieces in the game. They start the game protecting all the other pieces and can only move one square upwards, except a few cases: If a pawn hasn’t been moved since the start of the game, its first move can be two squares upwards. If there is an enemy piece on the immediate diagonal square, the pawn can also move diagonally to capture it. It can also perform a special move called “En passant”.</p>
+            </div>
+        </div>
+        <footer>
+            <div class="f_nav">
+                <p id="f_logo">CHESS THEORY</p>
+                <div id="f_pages">
+                    <a href="Home.html">Home</a>
+                    <a href="Pieces.html">Pieces</a>
+                    <a href="Rules.html">Rules</a>
+                    <a href="Openings.html">Openings</a>
+                    <a href="Famous_Players.html">Famous Players</a>
+                </div>
+            </div>
+            <div class="f_contact">
+                <h2>CONTACT</h2>
+                <address>
+                    <p><strong style="font-style:normal">Author:</strong><br>Christian Constantin Pustianu</p>
+                    <ul>
+                        <li>Tel: +40 735 851 024</li>
+                        <li>Email: <a href="mailto:sc20ccp@leeds.ac.uk">sc20ccp@leeds.ac.uk</a></li>
+                    </ul>
+                </address>
+            </div>
+            <div class="f_social">
+                <h2>SOCIAL MEDIA</h2>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="f_map">
+                <h1>FIDE Headquarters - Lausanne (Switzerland)</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87839.09959525487!2d6.582455223071494!3d46.528458625894665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c293ecd89a7e5%3A0xeb173fc9cae2ee5e!2sLausanne%2C%20Switzerland!5e0!3m2!1sen!2sro!4v1620113828038!5m2!1sen!2sro" loading="lazy"></iframe>
+                <p><em>Website created by Christian Constantin Pustianu, student ID:201436199, email:sc20ccp@leeds.ac.uk.</em></p>
+            </div>
+        </footer>
+    </body>
+</html>

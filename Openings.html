@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html manifest="main.appcache">
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta name="description" content="Page about opening theory">
+        <meta name="author" content="Christian Constantin Pustianu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" type="text/css" media="screen" rel="stylesheet"/>
+        <link href="print.css" type="text/css" media="print" rel="stylesheet"/>
+        <script src="script.js"></script>
+        <!-- link for social media icons -->
+        <script src="https://kit.fontawesome.com/62ad017188.js" crossorigin="anonymous"></script>
+        <title>Openings</title>
+    </head>
+    <body onload="defaultNone('openings'); defaultOpen();">
+        <nav id="nav">
+            <a id="logo" href="Home.html">CHESS THEORY</a>
+            <button id="icon" onclick="dropNavbar()"><i class="fas fa-bars"></i></button>
+            <a class="navitem" href="Home.html">Home</a>
+            <a class="navitem" href="Pieces.html">Pieces</a>
+            <a class="navitem" href="Rules.html">Rules</a>
+            <a class="navitem active" href="Openings.html">Openings</a>
+            <a class="navitem" href="Famous_Players.html">Famous Players</a>
+        </nav>
+        <div class="section1" id="s1openings">
+            <h1 class="title">The opening phase</h1>
+        </div>
+        <div class="section2" id="s2openings">
+            <div id="intro">
+                <h1>Opening Principles</h1>
+                <p>The <em>opening phase</em> lasts for the first few moves in a game of chess. During this time, the objective is to develop the pieces and to get control of the centre of the board (the 4 central squares: d4, d5, e4, e5). A chess <em>opening</em> refers to white’s first moves, while a <em>defense</em> is a name for black’s opening. There are a number of “standard” opening moves, that are referred to as “book moves”, five of which will be presented next.<p>
+            </div>
+            <div class="menu">
+                <button class="menu_btn" onclick="openTab(event, 'ruylopez', 'openings')" id="defaultOpen">Ruy Lopez</button>
+                <button class="menu_btn" onclick="openTab(event, 'italian', 'openings')">Italian Game</button>
+                <button class="menu_btn" onclick="openTab(event, 'sicilian', 'openings')">Sicilian Defense</button>
+                <button class="menu_btn" onclick="openTab(event, 'qgambit', 'openings')">Queen's Gambit</button>
+                <button class="menu_btn" onclick="openTab(event, 'english', 'openings')">English Opening</button>
+            </div>
+            <div class="openings" id="ruylopez">
+                <img src="photos/ruylopez.jpg" alt="Picture of the Ruy Lopez opening">
+                <h1>Ruy Lopez</h1>
+                <p>The Ruy Lopez (<em>Spanish Game</em>) is named after Rodrigo (Ruy) Lopez de Segura, a Spanish bishop that analysed this opening in his 1561 work, <em>“Libro de la Invencion Liberal y Arte del Juego del Axedrez”</em>, which translates to <em>“Book of the Liberal Invention and Art of the Game of Chess”</em>. It is one of the most popular openings, as it develops towards the centre and also pressures the black knight protecting the black e5 pawn. Many variations have been developed by experts, with strategies that can lead to either player winning the game. The moves are: 1. e4, e5; 2. Nf3, Nc6; and 3. Bb6.</p>
+            </div>
+            <div class="openings" id="italian">
+                <img src="photos/italian.jpg" alt="Picture of the Italian Game opening">
+                <h1>Italian Game</h1>
+                <p>The Italian Game (<em>“Giucco Piano”</em>, which translates to <em>“the quiet game”</em>) is perhaps the oldest chess opening, appearing in the <a class="actual_link" href="https://en.wikipedia.org/wiki/G%C3%B6ttingen_manuscript">Göttingen manuscript</a> (written around 1500-1505 or 1471). It is similar to Ruy Lopez, but this time the bishop targets the weak f7 pawn and with a few more moves it can end up threatening a queen or rook capture. The opening usually leads to aggressive, open positions and is used at all levels of play. The moves are: 1. e4, e5; 2. Nf3, Nc6; and 3. Bc4.</p>
+            </div>
+            <div class="openings" id="sicilian">
+                <img src="photos/sicilian.jpg" alt="Picture of the Sicilian Defense">
+                <h1>Sicilian Defense</h1>
+                <p>The Sicilian Defense was analysed in Giulio Polerio’s manuscript on chess, written in 1594, and was later named so in 1813 by the English master chess player Jacob Henry Sarratt. The move is one of the strongest and most popular responses to white’s e4 move. The reasoning is that black fights for the center by defending the d4 square while also not blocking his pawn (as with the e5 move). The opening usually leads to complex and dangerous games and has many variations. The moves are: 1. e4, c5.</p>
+            </div>
+            <div class="openings" id="qgambit">
+                <img src="photos/qgambit.jpg" alt="Picture of the Queen's Gambit opening">
+                <h1>Queen's Gambit</h1>
+                <p>The Queen’s Gambit is one of the oldest known chess openings, as it was mentioned in the <a class="actual_link" href="https://en.wikipedia.org/wiki/G%C3%B6ttingen_manuscript">Göttingen manuscript</a> alongside the Italian Game. It is a daring and aggressive move, as white sacrifices his c-pawn in order to get control of the centre. Even though the pawn is sacrificed, it is hard for black to defend his c-pawn and it can quickly be captured by white, thus balancing back the game. Still, black’s pawn is defended by the queen and has the option not to take the gambit, resulting in a completely different game. The opening is a difficult one and, like other gambits, it is rarely played at high levels. The moves are: 1. d4, d5 and 2. c4.</p>
+            </div>
+            <div class="openings" id="english">
+                <img src="photos/english.jpg" alt="Picture of the English Opening">
+                <h1>English Opening</h1>
+                <p>The English Opening derives its name from the English world champion Howard Staunton, who used it at the first international tournament: <a class="actual_link" href="https://en.wikipedia.org/wiki/London_1851_chess_tournament">London 1851</a>. It is a very popular first move, which can lead sometimes lead into other openings (Black’s e5 move results in a “reversed” Sicilian Defense). It is reliable and very flexible, as only one piece was moved, but it can lead to interesting games. The move is: 1. c4.</p>
+            </div>
+        </div>
+        <footer>
+            <div class="f_nav">
+                <p id="f_logo">CHESS THEORY</p>
+                <div id="f_pages">
+                    <a href="Home.html">Home</a>
+                    <a href="Pieces.html">Pieces</a>
+                    <a href="Rules.html">Rules</a>
+                    <a href="Openings.html">Openings</a>
+                    <a href="Famous_Players.html">Famous Players</a>
+                </div>
+            </div>
+            <div class="f_contact">
+                <h2>CONTACT</h2>
+                <address>
+                    <p><strong style="font-style:normal">Author:</strong><br>Christian Constantin Pustianu</p>
+                    <ul>
+                        <li>Tel: +40 735 851 024</li>
+                        <li>Email: <a href="mailto:sc20ccp@leeds.ac.uk">sc20ccp@leeds.ac.uk</a></li>
+                    </ul>
+                </address>
+            </div>
+            <div class="f_social">
+                <h2>SOCIAL MEDIA</h2>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="f_map">
+                <h1>FIDE Headquarters - Lausanne (Switzerland)</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87839.09959525487!2d6.582455223071494!3d46.528458625894665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c293ecd89a7e5%3A0xeb173fc9cae2ee5e!2sLausanne%2C%20Switzerland!5e0!3m2!1sen!2sro!4v1620113828038!5m2!1sen!2sro" loading="lazy"></iframe>
+                <p><em>Website created by Christian Constantin Pustianu, student ID:201436199, email:sc20ccp@leeds.ac.uk.</em></p>
+            </div>
+        </footer>
+    </body>
+</html>

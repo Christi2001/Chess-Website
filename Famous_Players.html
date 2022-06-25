@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html manifest="main.appcache">
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta name="description" content="Page about famous players and competitions">
+        <meta name="author" content="Christian Constantin Pustianu">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="style.css" type="text/css" media="screen" rel="stylesheet"/>
+        <link href="print.css" type="text/css" media="print" rel="stylesheet"/>
+        <script src="script.js"></script>
+        <!-- link for icons -->
+        <script src="https://kit.fontawesome.com/62ad017188.js" crossorigin="anonymous"></script>
+        <title>Famous Players</title>
+    </head>
+    <body>
+        <nav id="nav">
+            <a id="logo" href="Home.html">CHESS THEORY</a>
+            <button id="icon" onclick="dropNavbar()"><i class="fas fa-bars"></i></button>
+            <a class="navitem" href="Home.html">Home</a>
+            <a class="navitem" href="Pieces.html">Pieces</a>
+            <a class="navitem" href="Rules.html">Rules</a>
+            <a class="navitem" href="Openings.html">Openings</a>
+            <a class="navitem active" href="Famous_Players.html">Famous Players</a>
+        </nav>
+        <div class="section1" id="s1players">
+            <h1 class="title">The competitive chess scene</h1>
+        </div>
+        <div class="section2" id=s2players>
+            <div id="intro">
+                <h1>Competitive Play</h1>
+                <p>Chess tournaments have become the standard form of chess competition since the <a class="actual_link" href="https://en.wikipedia.org/wiki/London_1851_chess_tournament">London 1851</a> international tournament. Nowadays, they are organized according to the <abbr title="The World Chess Federation">FIDE</abbr> handbook, which covers all the information needed for conducting such an event. Furthermore, FIDE awards titles to the best players according to some norms (rating and different requirements for competitions). These include the title of <abbr title="Grandmaster">GM</abbr>, <abbr title="International Master">IM</abbr>, <abbr title="FIDE Master">FM</abbr> and <abbr title="Candidate Master">CM</abbr>.</p>
+            </div>
+            <hr>
+            <div class="players">
+                <img src="photos/kasparov.jpg" alt="Photo of Garry Kasparov (Chess Grandmaster)">
+                <h1>Garry Kasparov</h1>
+                <p>GM Garry Kasparov is considered the best player in history. He is the 13th world champion and held his title for almost 20 years. His highest rating was 2856 in 2000, a record that held up until the current world champion. He became the youngest world champion (at that time) at the age of 22 by defeating Anatoly Karpov in 1985. After officially retiring in 2005, he remained active. He trained some of the best chess players alive (Magnus Carlsen and Hikaru Nakamura) and released chess books that are considered among the best.</p>
+            </div>
+            <div class="players">
+                <img src="photos/carlsen.jpg" alt="Photo of Magnus Carlsen (current world champion)">
+                <h1>Magnus Carlsen</h1>
+                <p>GM Magnus Carlsen is the current world champion (for all three versions played in tournaments – standard, rapid and blitz). He became the youngest in player in the history of chess to surpass 2800 rating and beat Kasparov’s record by reaching 2889, which is currently the highest rating ever. He got the title at the age of 22 (a bit later than Kasparov) in 2013 after defeating Viswanathan Anand and has been dominating ever since.</p>
+            </div>
+            <div class="players">
+                <img src="photos/fischer.jpg" alt="Photo of Bobby Fischer (11th official world champion)">
+                <h1>Bobby Fischer</h1>
+                <p>GM Bobby Fischer was the 11th official world champion and perhaps the most famous one. He is the only American world champion and achieved a record of 20 consecutive wins against the best players, which will most likely never be surpassed. At the age of 15, he became the youngest GM (up to that time) and at age 29, in 1972, he won “The Match of the Century” against Boris Spassky. Unfortunately, he passed away in 2008, aged 64, due to kidney failure.</p>
+            </div>
+            <div>
+                <h1 id="tname">Current Top 50 Players in the World (May 2021)</h1>
+                <table id="topPlayers">
+                    <tr>
+                        <!-- <i class="fas fa-sort-numeric-down"></i> -->
+                        <th onclick="sortTableBy(0)">Number<i class="fas fa-sort"></i></i></th>
+                        <th onclick="sortTableBy(1)">Name<i class="fas fa-sort"></i></th>
+                        <th onclick="sortTableBy(2)">Federation<i class="fas fa-sort"></i></th>
+                        <th onclick="sortTableBy(0)">Rating<i class="fas fa-sort"></i></th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Carlsen, Magnus</td>
+                        <td>NOR<img class="flag" src="photos/NOR.jpg" alt="Photo of NOR Flag"></td>
+                        <td>2847</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Caruana, Fabiano</td>
+                        <td>USA<img class="flag" src="photos/USA.jpg" alt="Photo of USA Flag"></td>
+                        <td>2820</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ding, Liren</td>
+                        <td>CHN<img class="flag" src="photos/CHN.jpg" alt="Photo of CHN Flag"></td>
+                        <td>2799</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Nepomniachtchi, Ian</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2792</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Aronian, Levon</td>
+                        <td>ARM<img class="flag" src="photos/ARM.jpg" alt="Photo of ARM Flag"></td>
+                        <td>2781</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Giri, Anish</td>
+                        <td>NED<img class="flag" src="photos/NED.jpg" alt="Photo of NED Flag"></td>
+                        <td>2780</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Grischuk, Alexander</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2776</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Mamedyarov, Shakhriyar</td>
+                        <td>AZE<img class="flag" src="photos/AZE.jpg" alt="Photo of AZE Flag"></td>
+                        <td>2770</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>So, Wesley</td>
+                        <td>USA<img class="flag" src="photos/USA.jpg" alt="Photo of USA Flag"></td>
+                        <td>2770</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Radjabov, Teimour</td>
+                        <td>AZE<img class="flag" src="photos/AZE.jpg" alt="Photo of AZE Flag"></td>
+                        <td>2765</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>Rapport, Richard</td>
+                        <td>HUN<img class="flag" src="photos/HUN.jpg" alt="Photo of HUN Flag"></td>
+                        <td>2763</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>Vachier-Lagrave, Maxime</td>
+                        <td>FRA<img class="flag" src="photos/FRA.jpg" alt="Photo of FRA Flag"></td>
+                        <td>2760</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>Firouzja, Alireza</td>
+                        <td>FID<img class="flag" src="photos/FID.jpg" alt="Photo of FID Flag"></td>
+                        <td>2759</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>Dominguez Perez, Leinier</td>
+                        <td>USA<img class="flag" src="photos/USA.jpg" alt="Photo of USA Flag"></td>
+                        <td>2758</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>Karjakin, Sergey</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2757</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>Anand, Viswanathan</td>
+                        <td>IND<img class="flag" src="photos/IND.jpg" alt="Photo of IND Flag"></td>
+                        <td>2753</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>Wang, Hao</td>
+                        <td>CHN<img class="flag" src="photos/CHN.jpg" alt="Photo of CHN Flag"></td>
+                        <td>2744</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>Nakamura, Hikaru</td>
+                        <td>USA<img class="flag" src="photos/USA.jpg" alt="Photo of USA Flag"></td>
+                        <td>2736</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>Topalov, Veselin</td>
+                        <td>BUL<img class="flag" src="photos/BUL.jpg" alt="Photo of BUL Flag"></td>
+                        <td>2735</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>Wei, Yi</td>
+                        <td>CHN<img class="flag" src="photos/CHN.jpg" alt="Photo of CHN Flag"></td>
+                        <td>2732</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>Harikrishna, Pentala</td>
+                        <td>IND<img class="flag" src="photos/IND.jpg" alt="Photo of IND Flag"></td>
+                        <td>2730</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>Duda, Jan-Krzysztof</td>
+                        <td>POL<img class="flag" src="photos/POL.jpg" alt="Photo of POL Flag"></td>
+                        <td>2729</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>Vidit, Santosh Gujrathi</td>
+                        <td>IND<img class="flag" src="photos/IND.jpg" alt="Photo of IND Flag"></td>
+                        <td>2726</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>Andreikin, Dmitry</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2725</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>Adams, Michael</td>
+                        <td>ENG<img class="flag" src="photos/ENG.jpg" alt="Photo of ENG Flag"></td>
+                        <td>2716</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>Vitiugov, Nikita</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2715</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>Svidler, Peter</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2714</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>Dubov, Daniil</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2710</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>Vallejo Pons, Francisco</td>
+                        <td>ESP<img class="flag" src="photos/ESP.jpg" alt="Photo of ESP Flag"></td>
+                        <td>2710</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>Artemiev, Vladislav</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2709</td>
+                    </tr>
+                    <tr>
+                        <td>31</td>
+                        <td>Le, Quang Liem</td>
+                        <td>VIE<img class="flag" src="photos/VIE.jpg" alt="Photo of VIE Flag"></td>
+                        <td>2709</td>
+                    </tr>
+                    <tr>
+                        <td>32</td>
+                        <td>Xiong, Jeffery</td>
+                        <td>USA<img class="flag" src="photos/USA.jpg" alt="Photo of USA Flag"></td>
+                        <td>2709</td>
+                    </tr>
+                    <tr>
+                        <td>33</td>
+                        <td>Yu, Yangyi</td>
+                        <td>CHN<img class="flag" src="photos/CHN.jpg" alt="Photo of CHN Flag"></td>
+                        <td>2709</td>
+                    </tr>
+                    <tr>
+                        <td>34</td>
+                        <td>Tomashevsky, Evgeny</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2706</td>
+                    </tr>
+                    <tr>
+                        <td>35</td>
+                        <td>Bu, Xiangzhi</td>
+                        <td>CHN<img class="flag" src="photos/CHN.jpg" alt="Photo of CHN Flag"></td>
+                        <td>2705</td>
+                    </tr>
+                    <tr>
+                        <td>36</td>
+                        <td>Amin, Bassem</td>
+                        <td>EGY<img class="flag" src="photos/EGY.jpg" alt="Photo of EGY Flag"></td>
+                        <td>2701</td>
+                    </tr>
+                    <tr>
+                        <td>37</td>
+                        <td>Esipenko, Andrey</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2701</td>
+                    </tr>
+                    <tr>
+                        <td>38</td>
+                        <td>Van Foreest, Jorden</td>
+                        <td>NED<img class="flag" src="photos/NED.jpg" alt="Photo of NED Flag"></td>
+                        <td>2701</td>
+                    </tr>
+                    <tr>
+                        <td>39</td>
+                        <td>Alekseenko, Kirill</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2699</td>
+                    </tr>
+                    <tr>
+                        <td>40</td>
+                        <td>Kryvoruchko, Yuriy</td>
+                        <td>UKR<img class="flag" src="photos/UKR.jpg" alt="Photo of UKR Flag"></td>
+                        <td>2699</td>
+                    </tr>
+                    <tr>
+                        <td>41</td>
+                        <td>Maghsoodloo, Parham</td>
+                        <td>IRI<img class="flag" src="photos/IRI.jpg" alt="Photo of IRI Flag"></td>
+                        <td>2698</td>
+                    </tr>
+                    <tr>
+                        <td>42</td>
+                        <td>Navara, David</td>
+                        <td>CZE<img class="flag" src="photos/CZE.jpg" alt="Photo of CZE Flag"></td>
+                        <td>2697</td>
+                    </tr>
+                    <tr>
+                        <td>43</td>
+                        <td>Sadler, Matthew D</td>
+                        <td>ENG<img class="flag" src="photos/ENG.jpg" alt="Photo of ENG Flag"></td>
+                        <td>2694</td>
+                    </tr>
+                    <tr>
+                        <td>44</td>
+                        <td>Wojtaszek, Radoslaw</td>
+                        <td>POL<img class="flag" src="photos/POL.jpg" alt="Photo of POL Flag"></td>
+                        <td>2694</td>
+                    </tr>
+                    <tr>
+                        <td>45</td>
+                        <td>Shankland, Sam</td>
+                        <td>USA<img class="flag" src="photos/USA.jpg" alt="Photo of USA Flag"></td>
+                        <td>2691</td>
+                    </tr>
+                    <tr>
+                        <td>46</td>
+                        <td>Predke, Alexandr</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2690</td>
+                    </tr>
+                    <tr>
+                        <td>47</td>
+                        <td>Matlakov, Maxim</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2688</td>
+                    </tr>
+                    <tr>
+                        <td>48</td>
+                        <td>Almasi, Zoltan</td>
+                        <td>HUN<img class="flag" src="photos/HUN.jpg" alt="Photo of HUN Flag"></td>
+                        <td>2687</td>
+                    </tr>
+                    <tr>
+                        <td>49</td>
+                        <td>Areshchenko, Alexander</td>
+                        <td>UKR<img class="flag" src="photos/UKR.jpg" alt="Photo of UKR Flag"></td>
+                        <td>2687</td>
+                    </tr>
+                    <tr>
+                        <td>50</td>
+                        <td>Fedoseev, Vladimir</td>
+                        <td>RUS<img class="flag" src="photos/RUS.jpg" alt="Photo of RUS Flag"></td>
+                        <td>2687</td>
+                    </tr>
+                </table>
+            </div>
+            <h1 id="tournament">Chess Tournaments in May</h1>
+            <div id="map" onmouseover="getLocation()">
+                <div id="details" style="color: black;">
+                    <h1>Press a button on the list to see it on the map!</h1>
+                    <p></p>
+                </div>
+                <div id="buttons">
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(minDistance());">Closest Tournament</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(0); "><img class="flag" src="photos/HUN.jpg" alt="Photo of HUN Flag"><br>FIRST SATURDAY 2021 May, Budapest GM-IM-ELO-Shev. Nadassy Sys. FM</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(1); "><img class="flag" src="photos/ITA.jpg" alt="Photo of ITA Flag"><br>14esimo torneo del Carso</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(2); "><img class="flag" src="photos/CHE.jpg" alt="Photo of CHE Flag"><br>San Bernardino Spring Open</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(3); "><img class="flag" src="photos/HUN.jpg" alt="Photo of HUN Flag"><br>Vezerkepzo GM IM FM, May 13-21</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(4); "><img class="flag" src="photos/CHE.jpg" alt="Photo of CHE Flag"><br>Lido di Melano RAPID - International Open 15’</button>
+                    <button class="b_online">(ONLINE)<br>The 1st Online Workshop “Equal Opportunities</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(5); "><img class="flag" src="photos/SRB.jpg" alt="Photo of SRB Flag"><br>Mix for norms / - Third Saturday 210</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(6); "><img class="flag" src="photos/ITA.jpg" alt="Photo of ITA Flag"><br>Summer Open 2021</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(7); "><img class="flag" src="photos/ITA.jpg" alt="Photo of ITA Flag"><br>Open Internazionale Sud-Est Milano</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(8); "><img class="flag" src="photos/CHE.jpg" alt="Photo of CHE Flag"><br>Moesa Chess Festival</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(9); "><img class="flag" src="photos/HUN.jpg" alt="Photo of HUN Flag"><br>Vezerkepzo for GM, IM norms May 22-30</button>
+                    <button class="b_online">(ONLINE)<br>European Hybrid Qualification event for the FIDE World Cup</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(10); "><img class="flag" src="photos/ITA.jpg" alt="Photo of ITA Flag"><br>8th International Chess Festival City of Cattolica</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(11); "><img class="flag" src="photos/SRB.jpg" alt="Photo of SRB Flag"><br>GM BANJA VRUJCI 1- 2021</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(12); "><img class="flag" src="photos/SRB.jpg" alt="Photo of SRB Flag"><br>IM BANJA VRUJCI 1-2021</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(13); "><img class="flag" src="photos/ITA.jpg" alt="Photo of ITA Flag"><br>10° Salento International Chess Open 2021 - Ecoresort Le Sirenè</button>
+                    <button class="b_online">(HYBRID)<br>Zone 3.3 Zonal Open Championship</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(14); "><img class="flag" src="photos/UZB.jpg" alt="Photo of UZB Flag"><br>Zone 3.4 Zonal Open Championship</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(15); "><img class="flag" src="photos/CHN.jpg" alt="Photo of CHN Flag"><br>Zone 3.5 Zonal Open Championship</button>
+                    <button class="b_online">(HYBRID)<br>Asian Continental Open Chess Championship</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(16); "><img class="flag" src="photos/NGA.jpg" alt="Photo of NGA Flag"><br>Chess Tournament</button>
+                    <button class="b_map" onclick="buttonPressCounter();findTournament(17); "><img class="flag" src="photos/MWI.jpg" alt="Photo of MWI Flag"><br>African Individual Chess Championship 2021 (Open & Women)</button>
+                </div>
+                <iframe id="googleMaps" src="https://maps.google.co.uk?output=embed" frameborder="0" loading="lazy"></iframe>
+            </div>
+            <h2 id="searched"></h2>
+        </div>
+        <footer>
+            <div class="f_nav">
+                <p id="f_logo">CHESS THEORY</p>
+                <div id="f_pages">
+                    <a href="Home.html">Home</a>
+                    <a href="Pieces.html">Pieces</a>
+                    <a href="Rules.html">Rules</a>
+                    <a href="Openings.html">Openings</a>
+                    <a href="Famous_Players.html">Famous Players</a>
+                </div>
+            </div>
+            <div class="f_contact">
+                <h2>CONTACT</h2>
+                <address>
+                    <p><strong style="font-style:normal">Author:</strong><br>Christian Constantin Pustianu</p>
+                    <ul>
+                        <li>Tel: +40 735 851 024</li>
+                        <li>Email: <a href="mailto:sc20ccp@leeds.ac.uk">sc20ccp@leeds.ac.uk</a></li>
+                    </ul>
+                </address>
+            </div>
+            <div class="f_social">
+                <h2>SOCIAL MEDIA</h2>
+                <a href="https://www.facebook.com"><i class="fab fa-facebook-square"></i></a>
+                <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+            </div>
+            <div class="f_map">
+                <h1>FIDE Headquarters - Lausanne (Switzerland)</h1>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19997.15862335096!2d6.604611839618143!3d46.515333297430864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c302c4e4078b7%3A0x52fcb6b503b14e99!2sAvenue%20de%20Rhodanie%2054%2C%201007%20Lausanne%2C%20Switzerland!5e0!3m2!1sen!2sro!4v1620138370294!5m2!1sen!2sro" loading="lazy"></iframe>
+                <p><em>Website created by Christian Constantin Pustianu, student ID:201436199, email:sc20ccp@leeds.ac.uk.</em></p>
+            </div>
+        </footer>
+    </body>
+</html>
